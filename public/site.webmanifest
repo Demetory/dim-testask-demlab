@@ -1,8 +1,8 @@
 {
-  "name": "testtask-demlab",
-  "short_name": "testtask-demlab",
+  "name": "testtask-demlabs",
+  "short_name": "testtask-demlabs",
   "author": "Demetory",
-  "description": "Testtask for DemLab",
+  "description": "Testtask for DemLabs",
   "icons": [
     {
       "src": "icon.png",

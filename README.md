@@ -1,4 +1,4 @@
-# Test-task 4 DemLab
+# Test-task 4 DemLabs
 
 - Used own [Vue 3](https://vuejs.org/) + [Vite](https://vitejs.dev/) starter Template
 - Used [TypeScript](https://www.typescriptlang.org/) and [Script Setup SFC](https://vuejs.org/api/sfc-script-setup.html)

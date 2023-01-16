@@ -6,7 +6,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import ViewHome from "@/views/ViewHome.vue";
 
 // Data
-const defaultTitle = "Test-Task Demetory 4 DemLab";
+const defaultTitle = "Test-Task Demetory 4 DemLabs";
 
 // Routes
 const routes = [
