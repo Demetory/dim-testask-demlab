@@ -6,20 +6,24 @@
    ========================================================================== */
 
 // Main Dimensions
-$min-width: 320px;
+$min-width: 1024px;
 $min-height: 100vh;
-$gap: 1.6rem;
 
-// Borders
-$border-radius: 8px;
-$border-solid: solid 1px;
-$border-app: 20px;
+$border-radius: 16px;
 
-// Z-Indexes
-$zindex-top: 90000;
-$zindex-kreuz: 21000;
-$zindex-border-app: 20000;
-$zindex-navi: 10000;
+// Navi
+$navi-index: 2;
+$navi-width: 180px;
+$navi-gap: 5px;
+$navi-icon: 24px;
+
+// Footer
+$footer-index: 1;
+$footer-shadow: 5px -5px 10px rgba(8, 7, 13, 0.42), inset 1px 1px 0px #524d64;
+$footer-gap: 50px;
+$footer-dot-size: 8px;
+$footer-dot-green: radial-gradient(50% 50% at 50% 50%, #a9e81c 0%, #8ecc00 100%);
 
 // Transitions
 $transition: 0.5s ease;
+$transition-cubic: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);

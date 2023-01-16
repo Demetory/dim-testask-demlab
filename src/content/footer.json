@@ -1,0 +1,8 @@
+{
+  "footer": [
+    { "label": "Cellnet", "status": "green" },
+    { "label": "Mainnet", "status": "green" },
+    { "label": "Somenet", "status": "green" },
+    { "label": "Testnet", "status": "green" }
+  ]
+}

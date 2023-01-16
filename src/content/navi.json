@@ -1,0 +1,15 @@
+{
+  "navi": [
+    { "label": "Wallet", "icon": "IconWallet", "name": "ViewWallet", "path": "wallet" },
+    { "label": "DEX", "icon": "IconDEX", "name": "ViewDEX", "path": "dex" },
+    { "label": "TX explorer", "icon": "IconExplorer", "name": "ViewExplorer", "path": "explorer" },
+    { "label": "Certificates", "icon": "IconCertificates", "name": "ViewCertificates", "path": "certificates" },
+    { "label": "Tokens", "icon": "IconTokens", "name": "ViewTokens", "path": "tokens" },
+    { "label": "VPN client", "icon": "IconVPNClient", "name": "ViewVPNClient", "path": "client" },
+    { "label": "VPN service", "icon": "IconVPNService", "name": "ViewVPNService", "path": "service" },
+    { "label": "Console", "icon": "IconConsole", "name": "ViewConsole", "path": "console" },
+    { "label": "Logs", "icon": "IconLogs", "name": "ViewLogs", "path": "logs" },
+    { "label": "Settings", "icon": "IconSettings", "name": "ViewSettings", "path": "settings" },
+    { "label": "dApps", "icon": "IconApps", "name": "ViewApp", "path": "apps" }
+  ]
+}

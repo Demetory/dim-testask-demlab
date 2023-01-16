@@ -1,36 +1,53 @@
 <script setup lang="ts">
-// Props
-defineProps({ modelValue: {} });
-const emit = defineEmits(["update:modelValue"]);
+// Core
+import { ref } from "vue";
+// Modules
+import { useEventListener } from "@vueuse/core";
 
-const updateValue = (e: Event) => {
-  emit("update:modelValue", (e.target as HTMLInputElement).value);
-};
+// Props
+defineProps<{
+  type?: string;
+  placeholder?: string;
+}>();
+
+// Data
+const input = ref<HTMLInputElement | null>(null);
+
+// Listeners
+useEventListener(document, "keydown", (evt) => {
+  if (evt.key !== undefined || evt.keyCode !== undefined) {
+    if (evt.key === "Escape" || evt.keyCode === 27) {
+      input.value?.blur();
+      input.value!.value = "";
+    }
+  }
+});
 </script>
 
 <template>
-  <input class="input-text" :value="modelValue" @input="updateValue" />
+  <input ref="input" type="text" :placeholder="placeholder" :class="type" />
 </template>
 
 <style scoped lang="scss">
-.input-text {
-  margin: 0.6rem 0;
-  padding: 0.6rem 1.2rem;
-  color: colors.$font-black;
+input {
+  display: inline-flex;
+  padding-left: 36px;
+  max-width: 224px;
+  height: 30px;
+  @include font-style(400, 1.6rem, 2.4rem);
+  color: #757184;
+  border: none;
+  border-bottom: solid 1px #393b41;
   background-color: transparent;
-  border: grid.$border-solid colors.$link-main;
-  border-radius: grid.$border-radius;
-  transition: color grid.$transition, background-color grid.$transition;
-  outline: 0;
+  transition: color grid.$transition;
 
-  &:hover,
-  &:active,
   &:focus {
-    border: grid.$border-solid colors.$link-main-hover;
+    color: colors.$white;
   }
 
-  &:not(:last-child) {
-    margin-right: 1rem;
+  &.search {
+    margin: 15px 36px;
+    background: url(@/assets/images/IconSearch.svg) center left no-repeat;
   }
 }
 </style>

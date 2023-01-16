@@ -20,7 +20,7 @@ export default defineConfig({
           @use "./src/assets/scss/_vars/var.colors.scss" as colors;
           @use "./src/assets/scss/_vars/var.grid.scss" as grid;
           @import "./src/assets/scss/_vars/var.mixins.scss";
-       `,
+         `,
       },
     },
   },

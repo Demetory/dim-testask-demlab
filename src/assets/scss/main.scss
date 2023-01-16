@@ -1,0 +1,22 @@
+/* ==========================================================================
+   STYLES: Theme
+
+   Main App Theme
+   Feel free to customize your app ^-^
+   ========================================================================== */
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: colors.$bg-main;
+  color: colors.$white;
+}
+
+article {
+  display: flex;
+  flex: 1;
+
+  &.centered {
+    align-items: center;
+    justify-content: center;
+  }
+}

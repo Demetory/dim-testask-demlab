@@ -1,0 +1,36 @@
+{
+  "certificates": [
+    { "label": "core-t.0", "type": "Public" },
+    { "label": "core-t.1", "type": "Public" },
+    { "label": "core-t.2", "type": "Public" },
+    { "label": "test.test.1", "type": "Public" },
+    { "label": "test.test.2", "type": "Public" },
+    { "label": "test.test.3", "type": "Public" },
+    { "label": "test.test.4", "type": "Public" },
+    { "label": "test.test.5", "type": "Public" },
+    { "label": "test.test.6", "type": "Public" },
+    { "label": "test.test.7", "type": "Public" },
+    { "label": "core-private.0", "type": "Private" },
+    { "label": "core-private.1", "type": "Private" },
+    { "label": "core-private.2", "type": "Private" },
+    { "label": "test.private.1", "type": "Private" },
+    { "label": "test.private.2", "type": "Private" },
+    { "label": "test.private.3", "type": "Private" },
+    { "label": "test.private.4", "type": "Private" },
+    { "label": "test.private.5", "type": "Private" },
+    { "label": "test.private.6", "type": "Private" },
+    { "label": "test.private.7", "type": "Private" }
+  ],
+  "actions": [
+    { "label": "Create certificate", "action": 0 },
+    { "label": "Import certificate", "action": 1 },
+    { "label": "Export private certificate to public", "action": 2 },
+    { "label": "Export certificate to mempool", "action": 3 },
+    { "label": "Delete certificate", "action": 4 }
+  ],
+  "filter": [
+    { "label": "Public certificates", "name": "filter", "value": "Public" },
+    { "label": "Private certificates", "name": "filter", "value": "Private" },
+    { "label": "Both", "name": "filter", "value": "Both" }
+  ]
+}

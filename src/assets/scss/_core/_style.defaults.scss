@@ -21,8 +21,6 @@ body {
   font-style: normal;
   font-size: 1.6rem;
   line-height: 1;
-  color: colors.$font-main;
-  background-color: colors.$bg-body;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -46,37 +44,49 @@ main {
 
 // Links
 a {
-  color: colors.$link-main;
-  transition: color grid.$transition;
+  transition: color grid.$transition, opacity grid.$transition;
   text-decoration: none;
-
-  &:hover {
-    color: colors.$link-main-hover;
-  }
+  outline: 0;
 
   &:active,
-  &.router-link-exact-active {
-    color: colors.$link-main-active;
+  &.router-link-exact-active,
+  &:disabled {
     cursor: default;
-    text-decoration: none;
   }
+}
+
+// Forms
+button,
+input,
+select {
+  outline: 0;
+}
+
+button:not(:disabled),
+input:not(:disabled),
+select:not(:disabled) {
+  cursor: pointer;
 }
 
 // Selection Highlight
 ::selection {
-  background-color: colors.$bg-selection;
-  color: colors.$font-selection;
+  background-color: colors.$selection-bg;
+  color: colors.$selection-font;
   text-shadow: none;
 }
 
 // Fade + Blur Transition
-.fade-enter-active,
-.fade-leave-active {
-  transition: all grid.$transition;
+.page-enter-active,
+.page-leave-active,
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity grid.$transition, filter grid.$transition;
 }
 
-.fade-enter-from,
-.fade-leave-to {
+.page-enter-from,
+.page-leave-to,
+.layout-enter,
+.layout-leave-active {
   opacity: 0;
   filter: blur(1rem);
 }

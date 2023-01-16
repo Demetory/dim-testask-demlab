@@ -1,54 +1,35 @@
-// Import Core
+// Core
 import { nextTick } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 // Components
-import HomeView from "@/views/ViewHome.vue";
+import ViewHome from "@/views/ViewHome.vue";
 
 // Data
-const defaultTitle = "Dim Vue3 Template";
-const isAuthenticated = false;
+const defaultTitle = "Test-Task Demetory 4 DemLab";
 
 // Routes
 const routes = [
   {
     path: "/:pathMatch(.*)*",
-    name: "NotFound",
-    // Generates a separate chunk for this route which is lazy-loaded when the route is visited
-    component: () => import("@/views/ViewNotFound.vue"),
+    name: "View404",
+    component: () => import("@/views/View404.vue"),
     meta: {
       title: "Page not Found",
     },
   },
   {
+    path: "/certificates",
+    name: "ViewCertificates",
+    component: () => import("@/views/ViewCertificates.vue"),
+    meta: {
+      title: "Certificates",
+    },
+  },
+  {
     path: "/",
-    name: "home",
-    component: HomeView,
-  },
-  {
-    path: "/examples",
-    name: "examples",
-    component: () => import("@/views/ViewExamples.vue"),
-    meta: {
-      title: "Code Examples",
-    },
-  },
-  {
-    path: "/secret",
-    name: "secret",
-    component: () => import("@/views/ViewSecret.vue"),
-    meta: {
-      title: "Secret Page",
-      auth: true,
-    },
-  },
-  {
-    path: "/login",
-    name: "login",
-    component: () => import("@/views/ViewLogin.vue"),
-    meta: {
-      title: "Login",
-    },
+    name: "ViewHome",
+    component: ViewHome,
   },
 ];
 
@@ -70,12 +51,6 @@ router.afterEach((to) => {
   nextTick(() => {
     document.title = to.meta.title ? defaultTitle + " | " + to.meta.title : defaultTitle;
   });
-});
-
-router.beforeEach((to) => {
-  if (to.name !== "login" && to.meta.auth && !isAuthenticated) {
-    return { name: "login" };
-  }
 });
 
 // Export

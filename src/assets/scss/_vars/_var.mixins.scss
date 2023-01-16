@@ -4,3 +4,44 @@
    Used with Main App Theme only.
    Feel free to customize them ^-^
    ========================================================================== */
+
+// Shadows
+@mixin container-shadow {
+  box-shadow: inset 1px 1px 0px #524d64;
+  filter: drop-shadow(5px 5px 10px rgba(8, 7, 13, 0.42));
+}
+
+// Font styles
+@mixin font-style($weight, $size, $height) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+// Gradient 2DELETE
+@mixin gradientAnimation($angle, $start, $end, $transTime) {
+  background-size: 100%;
+  background-image: linear-gradient($angle, $start, $end);
+  position: relative;
+  z-index: 100;
+  &:before {
+    background-image: linear-gradient($angle, $end, $start);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+    transition: opacity $transTime;
+    box-shadow: 2px 2px 7px rgba(11, 10, 13, 0.44), inset 1px 1px 4px #f1e7ff;
+    border-radius: 30px;
+  }
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+}

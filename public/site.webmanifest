@@ -1,7 +1,8 @@
 {
-  "name": "Dim-Vue3-Template",
-  "short_name": "Dim-Vue3",
-  "description": "Vue 3 + Vite Starter Template",
+  "name": "testtask-demlab",
+  "short_name": "testtask-demlab",
+  "author": "Demetory",
+  "description": "Testtask for DemLab",
   "icons": [
     {
       "src": "icon.png",
